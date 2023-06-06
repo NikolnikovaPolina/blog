@@ -1,0 +1,8 @@
+<p><u><b><%= review.commenter %></u></b></p>
+<p><%= review.feedback %></p>
+
+<%= link_to "Destroy this review", [review.book, review], data: {
+  turbo_method: :delete,
+  turbo_confirm: "Are you sure?"
+} %>
+<hr>

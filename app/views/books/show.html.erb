@@ -2,8 +2,21 @@
 
 <%= render @book %>
 
+<hr size="2" color="black">
+
+<%= render @book.reviews %>
+
+<br>
 <div>
-  <%= link_to "Edit this book", edit_book_path(@book) %> |
-  <%= link_to "Destroy this book", @book, method: :delete %> |
+  <%= link_to "New review", new_book_review_path(@book) %>
+</div>
+<br>
+
+<div>
+  <%= link_to "Edit this book", edit_book_path(@book) %>
+</div>
+<br>
+
+<div>
   <%= link_to "Back to books", books_path %> 
 </div>

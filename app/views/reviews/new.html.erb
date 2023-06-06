@@ -1,0 +1,26 @@
+<h1>New book</h1>
+
+<%= form_with(model: [ @book, @book.reviews.build ]) do |form| %>
+    <div>
+      <%= form.label :commenter, style: "display: block" %>
+      <%= form.text_area :commenter %>
+    </div>
+    
+    <br>
+  
+    <div>
+      <%= form.label :feedback, style: "display: block" %>
+      <%= form.text_area :feedback %>
+    </div>
+  
+    <div>
+      <br>
+      <%= form.submit %>
+    </div>
+  <% end %>
+  
+<br>
+
+<div>
+  <%= link_to "Back to book", book_path(@book) %>
+</div>
